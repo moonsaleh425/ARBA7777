@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحتا الاسكربت</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #003a6b; /* اللون الأزرق الداكن للخلفية */
+      color: white; /* نص باللون الأبيض */
+      direction: rtl;
+      text-align: center;
+    }
+    h1 {
+      color: #ffffff;
+      margin-top: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #e0e0e0;
+      margin: 15px;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      margin: 20px 0;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      background-color: #005a9c; /* خلفية زرقاء أفتح */
+      color: white; /* النص داخل الحقول أبيض */
+      text-align: center;
+    }
+    input[type="text"]:focus {
+      outline: none;
+      border-color: #e0e0e0;
+    }
+    button {
+      background-color: #005a9c; /* أزرق أفتح من الخلفية */
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      border: 2px solid #ffffff; /* إطار أبيض */
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0073e6; /* لون أفتح عند التمرير */
+    }
+    .error-message {
+      color: #ff5c5c;
+      font-weight: bold;
+      display: none;
+      margin-top: 20px;
+    }
+    #loadingMessage p {
+      margin-top: 10px;
+      color: white;
+      font-size: 18px;
+      display: none;
+    }
+    .loading-spinner {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      display: none;
+    }
+    .loading-spinner .circle {
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      animation: loading 1.2s infinite;
+    }
+    .loading-spinner .circle:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .loading-spinner .circle:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    .loading-spinner .circle:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+    .loading-spinner .circle:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+    .loading-spinner .circle:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+    .loading-spinner .circle:nth-child(6) {
+      animation-delay: 1s;
+    }
+    @keyframes loading {
+      0%, 100% {
+        background-color: #e0e0e0;
+      }
+      50% {
+        background-color: #0073e6;
+      }
+    }
+    .script-input {
+      color: white; /* النص داخل الحقول */
+      background-color: #005a9c;
+      border: 1px solid #ffffff;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+      width: 80%;
+      text-align: center;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- الصفحة الثانية -->
+  <div id="page2">
+    <div class="container">
+      <h1>تأكيد استخدام الاسكربت</h1>
+      <input type="text" id="codeInput" placeholder="أدخل ID الحساب الذي تم إنشاؤه باستخدام البروموكود ARBA7" maxlength="9" style="color: white;">
+      <p>
+        <label>
+          <input type="checkbox" id="termsCheckbox"> أوافق على الشروط
+        </label>
+      </p>
+      <ul style="text-align: right; font-size: 16px; line-height: 1.8; color: white;">
+        <li>يجب أن يكون هناك اتفاق بعدم إبلاغ أي جهات حكومية عن هذا الهاكر (الاسكربت).</li>
+        <li>يجب إنشاء حساب باستخدام البروموكود <span style="color: #00bfff; font-weight: bold;">ARBA7</span> فقط.</li>
+        <li>تأكد من شحن حسابك بمبلغ 5 دولار أو ما يعادلها بعملتك المحلية قبل الدخول إلى الاسكربت.</li>
+        <li>عدم الإفراط في استخدام التطبيق لتجنب أي مشاكل.</li>
+      </ul>
+      <div style="margin-top: 20px;">
+        <button id="confirmButton" onclick="validateInput()">تأكيد</button></div>
+      <p id="errorMessage" class="error-message"></p>
+      <div id="loadingMessage">
+        <p id="message1">جاري ربط حسابك...</p>
+        <p id="message2">جاري اختراق السيستم...</p>
+        <div class="loading-spinner">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الصفحة الثالثة -->
+  <div id="page3" style="display:none;">
+    <div class="container">
+      <h1>اختر الاسكربت الخاص بك</h1>
+      <!-- أزرار للانتقال إلى الروابط -->
+      <button onclick="window.location.href='https://moonsaleh425.github.io/ARBA777/'">اسكربت الطيارة</button>
+      <button onclick="window.location.href='https://moonsaleh425.github.io/ARBA77/'">اسكربت التفاحة</button>
+      <p class="important-text">
+        تحذير: الاسكربتات بل الموقع بأكمله سيرتبط تلقائياً بحسابك إذا كان مسجل بالبروموكود <span style="color: #00bfff; font-weight: bold;">ARBA7</span>. 
+        إذا تم إنشاء الحساب دون وضع البروموكود، فسوف تحصل على توقعات خطأ من الاسكربت.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function validateInput() {
+      const codeInput = document.getElementById('codeInput').value;
+      const termsChecked = document.getElementById('termsCheckbox').checked;
+      const errorMessage = document.getElementById('errorMessage');
+      const loadingMessage = document.getElementById('loadingMessage');
+      const message1 = document.getElementById('message1');
+      const message2 = document.getElementById('message2');
+      const loadingSpinner = document.querySelector('.loading-spinner');
+
+      if (!termsChecked) {
+        errorMessage.textContent = "يجب الموافقة على الشروط لإكمال العملية.";
+        errorMessage.style.display = "block";
+        return;
+      }
+
+      if (!/^\d{9}$/.test(codeInput)) {
+        errorMessage.textContent = "تأكد من إدخال ID الحساب الصحيح الذي تم إنشاؤه بالبروموكود.";
+        errorMessage.style.display = "block";
+        return;
+      }
+
+      errorMessage.style.display = "none";
+      loadingMessage.style.display = "block";
+      message1.style.display = "block";
+      loadingSpinner.style.display = "flex";
+
+      setTimeout(() => {
+        message1.style.display = "none";
+        message2.style.display = "block";
+
+        setTimeout(() => {
+          document.getElementById('page2').style.display = "none";
+          document.getElementById('page3').style.display = "block";
+        }, 2000);
+      }, 2000);
+    }
+  </script>
+  
+</body>
+</html>
